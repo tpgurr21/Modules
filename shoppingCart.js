@@ -2,6 +2,7 @@
 console.log('Exporting module')
 
 const shippingCost = 10;
+console.log(shippingCost)
 export const cart = [];
 
 export const addToCart = function(product, quantity) 
