@@ -39,7 +39,7 @@ const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
 const newBudget2 = addExpense(newBudget1, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
 const newBudget3 = addExpense(newBudget2, spendingLimits, 200, 'Stuff', 'Jay');
 
-console.log(newBudget3)
+// console.log(newBudget3)
 
 // const checkExpenses2 = function (state, limits) {
 //   return state.map(entry => {
@@ -60,6 +60,7 @@ const checkExpenses = (state, limits) =>
 const finalBudget = checkExpenses(newBudget3, spendingLimits);
 console.log(finalBudget);
 
+// Impure (because it has console.log)
 const logBigExpenses = function (state, bigLimit) {
   const bigExpenses = state
   .filter(entry => entry.value <= -bigLimit)
@@ -77,5 +78,4 @@ const logBigExpenses = function (state, bigLimit) {
   // console.log(output);
 };
 
-console.log(budget);
 logBigExpenses(finalBudget, 500);
